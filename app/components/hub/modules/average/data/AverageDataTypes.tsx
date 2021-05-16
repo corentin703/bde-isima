@@ -12,6 +12,8 @@ interface UEData {
 interface SectorData {
   name: String
   ues: UEData[]
+
+  isCurrent?: boolean
 }
 
 interface SemesterData {
@@ -22,6 +24,8 @@ interface SemesterData {
 interface Year {
   name: String
   semesters: SemesterData[]
+
+  isCurrent?: boolean
 }
 
 export type { SubjectData, UEData, SectorData, SemesterData, Year }
