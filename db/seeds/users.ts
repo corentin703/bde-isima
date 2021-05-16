@@ -19,6 +19,21 @@ const users = async (db) => {
     },
   })
 
+  await db.user.create({
+    data: {
+      id: "1511",
+      lastname: "VÉROT",
+      firstname: "Corentin",
+      nickname: "El Generalísimo",
+      image: faker.image.imageUrl(100, 100, undefined, false, true),
+      email: "corentin.verot@outlook.com",
+      card: 1511,
+      balance: 0,
+      roles: "*",
+      promotionId: promotion.id,
+    },
+  })
+
   for (let i = 0; i < 4; ++i) {
     await db.user.create({
       data: {
